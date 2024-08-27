@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to bottom, #87CEEB, #B0E0E6); /* Sky blue gradient */
+            color: #333333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px; /* Adjusted max width */
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Light transparent container */
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem; /* Reduced heading size */
+            animation: slideIn 0.5s ease-in-out;
+            color: #2E8B57; /* SeaGreen for the heading */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px; /* Reduced margin */
+            font-weight: 700;
+            font-size: 1rem; /* Adjusted font size */
+        }
+
+        input, textarea {
+            width: calc(100% - 20px); /* Adjusted width for padding */
+            padding: 10px; /* Reduced padding */
+            margin-bottom: 15px; /* Reduced margin */
+            border: 1px solid #333;
+            border-radius: 4px;
+            background-color: #ffffff; /* White background for inputs */
+            color: #333333;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #f39c12;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px; /* Adjusted padding */
+            background-color: #f39c12;
+            color: #121212;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem; /* Adjusted font size */
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: buttonFadeIn 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes buttonFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/contact" method="post">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>

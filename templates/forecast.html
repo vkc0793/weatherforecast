@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background:  linear-gradient(to bottom, #87CEEB, #B0E0E6); /* Sky blue gradient */
+            background-size: cover;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .powerbiPlaceholder {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather Forecast Analysis</h1>
+        <div class='powerbiPlaceholder'>
+            <iframe title="Weather Forecast Dashboard" width="100%" height="600px" src="https://app.powerbi.com/view?r=eyJrIjoiNjNjMWYwNmEtZGVlNS00NDJhLTljZDgtMWNjYTJhNTZkMDkwIiwidCI6IjFmNDVmYjYzLTVjNWUtNDM5NC1hZTY0LWZkMDExMGNjNzQ3NyJ9&pageName=9bac824c4d502a5c6c20" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
